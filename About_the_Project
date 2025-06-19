@@ -1,0 +1,47 @@
+Credit Risk Analysis – Exploratory Data Analysis (EDA) and Modeling 
+Project Overview
+This project performs Exploratory Data Analysis (EDA) and builds a classification model to predict credit default risk. It includes data cleaning, visualization, encoding, scaling, model training, evaluation, and feature importance analysis.
+
+ 1. Objective
+To analyze credit-related data and build a machine learning model to predict the likelihood of a customer defaulting on their credit.
+
+ 2. Libraries Used
+pandas, numpy – for data manipulation and analysis
+matplotlib, seaborn – for data visualization
+sklearn – for preprocessing, model training, and evaluation
+GridSearchCV – for hyperparameter tuning
+
+ 3. Data Preprocessing
+Loaded the dataset using pandas
+Checked for null values and filled them using median imputation
+Performed outlier detection using the IQR (Interquartile Range) method
+Encoded categorical variables using LabelEncoder
+Scaled numerical features using StandardScaler
+
+4. Exploratory Data Analysis (EDA)
+Target Variable Distribution: Visualized the class balance of the target column (default)
+Correlation Heatmap: Displayed relationships between numeric features
+Histograms: Plotted feature-wise distributions
+Boxplots: Detected outliers visually
+Pair Plot: Explored pairwise relationships among features
+Group-by Analysis: Examined average feature values grouped by default status
+
+5. Modeling
+Model Used: RandomForestClassifier
+Train-Test Split: 80% training and 20% testing
+Model Metrics:
+Confusion Matrix
+Classification Report (Precision, Recall, F1-Score)
+Accuracy Score
+Feature Importance: Visualized top features influencing predictions
+
+6. Hyperparameter Tuning
+Performed tuning using GridSearchCV with:
+n_estimators: [50, 100]
+max_depth: [5, 10, None]
+Identified the best parameter set and corresponding model accuracy
+
+7. Key Insights
+Some features showed strong correlation with the target variable
+Imbalanced data may affect model performance, requiring techniques like SMOTE (optional)
+Feature importance helped prioritize variables influencing default
